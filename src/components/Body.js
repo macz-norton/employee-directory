@@ -4,7 +4,7 @@ function Body({users}) {
         <div className="card">
             <div className="card-body">
                 <h5 className="card-title">Special title treatment</h5>
-                {users.map(user => <p className="card-text">{user.name.first} {user.name.last}</p>)}
+                {users.map(users => <p className="card-text">{users.name.first} {users.name.last}</p>)}
             </div>
         </div>
     );
