@@ -1,4 +1,11 @@
-class App extends React.Component {
+import React from "react";
+import Body from "./Body";
+import Filters from "./Filters";
+import Header from "./Header";
+import API from "../utils/API";
+// import testUsers from "../testUsers.json";
+
+class RandomUserContainer extends React.Component {
   
     state = {
       users: [],
@@ -9,24 +16,20 @@ class App extends React.Component {
       this.randomUser("");
     }
   
-    randomUser = query => {
-      API.getUsers(query)
-        .then(users => this.setState({ users: users.data }))
+    randomUser = () => {
+      API.getUsers(30)
+        .then(employee => this.setState({ users: employee.data.results }))
         .catch(err => console.log(err))
     }
   
     handleInputChange = event => {
-      const { name, value } = event.target;
+      const value = event.target.value;
+      const name = event.target.name;
   
       this.setState({
         [name]: value
       });
     };
-  
-    // handleFormSubmit = event => {
-    //   event.preventDefault();
-    //   this.randomUser(this.state.search);
-    // }
     
     render() {
       return (
@@ -41,4 +44,4 @@ class App extends React.Component {
   
   }
   
-  export default App;
+  export default RandomUserContainer;
