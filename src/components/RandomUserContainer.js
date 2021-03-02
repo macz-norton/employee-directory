@@ -8,7 +8,7 @@ import API from "../utils/API";
 class RandomUserContainer extends React.Component {
   
     state = {
-      users: [],
+      data: [],
       search: ""
     }
   
@@ -18,7 +18,7 @@ class RandomUserContainer extends React.Component {
   
     randomUser = () => {
       API.getUsers(30)
-        .then(employee => this.setState({ users: employee.data.results }))
+        .then(employee => this.setState({ data: employee.data.results }))
         .catch(err => console.log(err))
     }
   
@@ -37,7 +37,7 @@ class RandomUserContainer extends React.Component {
           <Header />
           <Filters handleInputChange={this.handleInputChange}/>
           {this.state.search}
-          <Body users={this.state.users} search={this.state.search}/>
+          <Body data={this.state.data} search={this.state.search}/>
         </div>
       );
     }
