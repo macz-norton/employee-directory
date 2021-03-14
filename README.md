@@ -41,6 +41,7 @@ No installation required.
 * [React-table, npm package](https://www.npmjs.com/package/react-table)
 * [Random User API](https://randomuser.me/)
 * [Styled Components](https://styled-components.com/docs/)
+* [Freepick icon for favicon](https://www.freepik.com)
 
 ## License
 
