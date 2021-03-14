@@ -1,11 +1,13 @@
+import "./Header.css";
+
 function Header() {
 
     return (
         <div className="jumbotron">
-            <h1 className="display-4">Hello, world!</h1>
-            <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <h1 className="display-4">Employee Directory</h1>
+            <p className="lead">Use this employee directory to find important employee information easily</p>
+            <p>Search by country to filter the table or click the table headers to sort the table.</p>
             <hr className="my-4" />
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         </div>
     )
 

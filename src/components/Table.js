@@ -35,7 +35,7 @@ function Table({columns, data}) {
                 placeholder={"Search by country"}
                 />
             </div>
-
+            <br />
             <table {...getTableProps()}>
             <thead>
                 {headerGroups.map(headerGroup => (
