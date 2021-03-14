@@ -40,7 +40,7 @@ No installation required.
 * [React-table Docs](https://react-table.tanstack.com/docs/examples/sorting)
 * [React-table, npm package](https://www.npmjs.com/package/react-table)
 * [Random User API](https://randomuser.me/)
-* [Styled Compoenets](https://styled-components.com/docs/)
+* [Styled Components](https://styled-components.com/docs/)
 
 ## License
 
