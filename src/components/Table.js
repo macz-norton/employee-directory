@@ -28,11 +28,13 @@ function Table({columns, data}) {
 
     return (
         <div>
-            <input 
-            value={filterInput}
-            onChange={handleFilterChange}
-            placeholder={"Search by country"}
-            />
+            <div>
+                <input 
+                value={filterInput}
+                onChange={handleFilterChange}
+                placeholder={"Search by country"}
+                />
+            </div>
 
             <table {...getTableProps()}>
             <thead>
