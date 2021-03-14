@@ -1,5 +1,43 @@
 import React, { useMemo } from "react";
 import Table from "./Table";
+import styled from "styled-components";
+
+const Styles = styled.div`
+  padding: 1rem;
+
+  table {
+    border-spacing: 0;
+    border: 1px solid black;
+
+    tr {
+      :last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    tr:hover {
+        background-color: #E8E8E8;
+    }
+
+    th {
+        background-color: #E8E8E8;
+    }
+
+    th,
+    td {
+      margin: 0;
+      padding: 0.5rem;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+
+      :last-child {
+        border-right: 0;
+      }
+    }
+  }
+`
 
 function Body({data, search}) {
 
@@ -7,7 +45,7 @@ function Body({data, search}) {
 
         () => [
             {
-                Header: "Employees",
+                Header: "Employee Directory",
                 columns: [
                     {
                         Header: "Profile picture",
@@ -37,7 +75,10 @@ function Body({data, search}) {
 
     return (
         <div className="Body">
-            <Table columns={columns} data={data} />
+            <Styles>
+                <Table columns={columns} data={data} />
+            </Styles>
+
         </div>
     )
 
