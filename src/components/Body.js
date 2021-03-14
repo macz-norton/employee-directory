@@ -48,10 +48,6 @@ function Body({data, search}) {
                 Header: "Employee Directory",
                 columns: [
                     {
-                        Header: "Profile picture",
-                        accessor: "picture.thumbnail"
-                    },
-                    {
                         Header: "First name",
                         accessor: "name.first"
                     },
@@ -62,6 +58,10 @@ function Body({data, search}) {
                     {
                         Header: "Email",
                         accessor: "email"
+                    },
+                    {
+                        Header: "Phone",
+                        accessor: "phone"
                     },
                     {
                         Header: "Country",
@@ -81,23 +81,6 @@ function Body({data, search}) {
 
         </div>
     )
-
-    // return(
-    //     <div className="card">
-    //         <div className="card-body">
-    //             <h5 className="card-title">Special title treatment</h5>
-    //             {
-    //                 users
-    //                     .filter((user) => {
-    //                         // return true or false on if search is in the first or last name
-    //                         // concatenate first and last name
-    //                         return true;
-    //                     })
-    //                     .map(user => <p className="card-text">{user.name.first} {user.name.last}</p>)
-    //             }
-    //         </div>
-    //     </div>
-    // );
 
 }
 
